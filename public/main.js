@@ -39,3 +39,13 @@ const context = {
     }
   ]
 };
+
+const template = document.getElementById('templateHB').innerHTML;
+
+const result = Handlebars.compile(template);
+
+const updatedHtml = result(context);
+
+const infoSection = document.getElementById('information');
+
+infoSection.innerHTML = updatedHtml;
